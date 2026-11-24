@@ -1,0 +1,30 @@
+{
+  "name": "webpack-git-commit-version-plugin",
+  "version": "1.0.0",
+  "description": "webpack 插件：每次构建生成前端更新报告，并通过文件/控制台/Webhook 主动告知后端团队，避免发布流程漏跑前端 CI/CD。",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "bin": {
+    "verify-git-commit-version": "src/cli.js"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "example": "node examples/run-demo.js",
+    "verify:git-version": "node src/cli.js",
+    "pack:release": "mkdir -p release && npm pack --pack-destination release"
+  },
+  "peerDependencies": {
+    "webpack": ">=5"
+  },
+  "devDependencies": {
+    "webpack": "^5.97.1"
+  },
+  "license": "MIT"
+}
